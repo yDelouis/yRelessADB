@@ -1,0 +1,26 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:persistent="true" >
+
+    <PreferenceCategory android:title="@string/settings" >
+        <EditTextPreference 
+            android:key="@string/pref_port_key"
+            android:title="@string/port"
+            android:defaultValue="5555" />
+        <CheckBoxPreference
+            android:defaultValue="@string/default_notif"
+            android:key="@string/pref_notif_key"
+            android:summary="@string/server_noti"
+            android:title="@string/notification" />
+        <CheckBoxPreference
+            android:defaultValue="@string/default_wifi_on"
+            android:key="@string/pref_wifi_on_key"
+            android:summary="@string/server_wifi_on"
+            android:title="@string/wifi_on" />
+        <CheckBoxPreference
+            android:defaultValue="@string/default_wifi_off"
+            android:key="@string/pref_wifi_off_key"
+            android:summary="@string/server_wifi_off"
+            android:title="@string/wifi_off" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

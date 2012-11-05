@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	<ImageView
+	    android:id="@+id/main_image"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:layout_above="@+id/main_ipContainer"
+	    android:layout_margin="40dp"
+	    android:src="@drawable/img_adb_off" />
+	
+	<LinearLayout
+	    android:id="@+id/main_ipContainer"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:padding="20dp"
+	    android:background="#55FFFFFF"
+	    android:orientation="vertical" >
+	    
+	    <fr.ydelouis.yrelessadb.view.AutoFitTextView
+	        android:id="@+id/main_ip"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:textColor="@android:color/white"
+	        android:textSize="30sp"
+	        android:text="192.168.1.129:5555" />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dp"
+	        android:layout_marginLeft="10dp"
+	        android:text="@string/main_commandTitle"
+	        android:textColor="@android:color/white" />
+	    
+	    <TextView
+	        android:id="@+id/main_command"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="4dp"
+	        android:text="@string/main_command"
+	        android:textColor="@android:color/white" />
+	    
+	</LinearLayout>
+    
+</RelativeLayout>
