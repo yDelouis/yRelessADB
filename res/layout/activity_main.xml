@@ -7,9 +7,21 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_centerInParent="true"
-	    android:layout_above="@+id/main_ipContainer"
-	    android:layout_margin="40dp"
+	    android:layout_above="@+id/main_hint"
+	    android:layout_marginTop="40dp"
+	    android:layout_marginLeft="40dp"
+	    android:layout_marginRight="40dp"
 	    android:src="@drawable/img_adb_off" />
+	
+	<TextView 
+	    android:id="@+id/main_hint"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/main_ipContainer"
+	    android:layout_marginBottom="40dp"
+	    android:gravity="center_horizontal"
+	    android:textSize="20sp"
+	    android:text="@string/main_hintOn" />
 	
 	<LinearLayout
 	    android:id="@+id/main_ipContainer"

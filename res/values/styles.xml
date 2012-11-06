@@ -1,7 +1,15 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="AppTheme" parent="android:Theme.Holo">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="android:windowBackground">@drawable/bkg_app</item>
     </style>
+    
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:titleTextStyle">@android:style/TextAppearance.Holo.Widget.ActionBar.Title</item>
+	    <item name="android:subtitleTextStyle">@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle</item>
+	    <item name="android:progressBarStyle">@android:style/Widget.Holo.ProgressBar.Horizontal</item>
+	    <item name="android:indeterminateProgressStyle">@android:style/Widget.Holo.ProgressBar</item>
+	</style>
 
 </resources>
