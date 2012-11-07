@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import fr.ydelouis.yrelessadb.R;
+import fr.ydelouis.yrelessadb.receiver.ADBReceiver;
 import fr.ydelouis.yrelessadb.util.ADB;
 import fr.ydelouis.yrelessadb.util.Dialog;
 import fr.ydelouis.yrelessadb.util.Root;
@@ -55,6 +56,7 @@ public class MainActivity extends Activity
 		super.onResume();
 		loadData();
 		updateUI();
+		sendBroadcast();
 	}
 	
 	private void setViews() {
@@ -81,7 +83,7 @@ public class MainActivity extends Activity
 			image.setImageResource(R.drawable.img_adb_on);
 			hint.setText(R.string.main_hintOff);
 			ipContainer.setVisibility(View.VISIBLE);
-			String completeIp = Wifi.getIp(this)+":"+ADB.PORT;
+			String completeIp = Wifi.getIp(this)+":"+ADB.getPort(this);
 			ipText.setText(completeIp);
 			commandText.setText(String.format(getString(R.string.main_command), completeIp));
 		} else {
@@ -89,6 +91,10 @@ public class MainActivity extends Activity
 			hint.setText(R.string.main_hintOn);
 			ipContainer.setVisibility(View.INVISIBLE);
 		}
+	}
+	
+	private void sendBroadcast() {
+		sendBroadcast(new Intent(this, ADBReceiver.class));
 	}
 	
 	private void toggleAdb() {

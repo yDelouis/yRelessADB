@@ -26,11 +26,11 @@ public class ADBReceiver extends BroadcastReceiver
 	
 	private void start(Context context) {
 		NotifManager.show(context);
-		WidgetReceiver.setOn(context);
+		WidgetProvider.setOn(context);
 	}
 	
 	private void stop(Context context) {
 		NotifManager.cancel(context);
-		WidgetReceiver.setOff(context);
+		WidgetProvider.setOff(context);
 	}
 }

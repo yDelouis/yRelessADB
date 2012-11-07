@@ -2,6 +2,11 @@
     android:persistent="true" >
 
     <PreferenceCategory android:title="@string/settings" >
+        <EditTextPreference 
+            android:key="@string/pref_port_key"
+            android:title="@string/port"
+            android:defaultValue="@string/default_port"
+            android:inputType="number" />
         <CheckBoxPreference
             android:defaultValue="@string/default_notif"
             android:key="@string/pref_notif_key"

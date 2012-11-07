@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="6dp"
@@ -14,10 +15,15 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="2dp"
-        android:src="@drawable/img_adb_off"/>
+        android:src="@drawable/img_widget_off"/>
+    
+    <ImageView 
+        android:layout_width="1dp"
+        android:layout_height="46dp"
+        android:background="@drawable/divider_widget" />
     
     <TextView 
-        android:id="@+id/widget_ip"
+        android:id="@+id/widget_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -26,6 +32,6 @@
         android:gravity="center_horizontal"
         android:textSize="14sp"
         android:textColor="@color/widget_text"
-        android:text="192.168.100.129:5555" />
+        android:text="@string/widget_off" />
 
 </LinearLayout>

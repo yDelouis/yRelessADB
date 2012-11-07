@@ -32,7 +32,7 @@ public class NotifManager
     	builder.setWhen(System.currentTimeMillis());
     	
     	builder.setContentTitle(context.getString(R.string.notif_title));
-    	builder.setContentText(Wifi.getIp(context)+":"+ADB.PORT);
+    	builder.setContentText(Wifi.getIp(context)+":"+ADB.getPort(context));
     	
     	Intent notificationIntent = new Intent(context, MainActivity.class);
     	notificationIntent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);

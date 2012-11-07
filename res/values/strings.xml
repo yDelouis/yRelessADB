@@ -16,17 +16,23 @@
     <string name="notif_title">ADB over Wifi is running</string>
     <string name="notif_stop">Stop</string>
     
+    <string name="widget_off">ADB over wifi off</string>
+    <string name="widget_wifiDisconnected">Wifi disconnected</string>
+    
     <!-- Settings -->
+    <string name="port">Port</string>
 	<string name="notification">Notification</string>
 	<string name="server_noti">When the connection active</string>
 	<string name="wifi_on">WiFi auto on</string>
 	<string name="server_wifi_on">Turn on WiFi when app starts</string>
     
     <!-- Defaults -->
+    <string name="default_port">5555</string>
 	<string name="default_notif">true</string>
 	<string name="default_wifi_on">false</string>
 
 	<!-- Keys -->
+	<string name="pref_port_key">key_port</string>
 	<string name="pref_notif_key">key_notif</string>
 	<string name="pref_wifi_on_key">key_wifi_on</string>
 	
