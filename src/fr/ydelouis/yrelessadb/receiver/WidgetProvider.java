@@ -1,6 +1,5 @@
 package fr.ydelouis.yrelessadb.receiver;
 
-import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -17,24 +16,7 @@ import fr.ydelouis.yrelessadb.util.Wifi;
 
 public class WidgetProvider extends AppWidgetProvider
 {
-	private static final long UPDATE_DELAY = 5*60*1000;
 	private static final String ACTION_TOGGLE = "action_toggle";
-	private PendingIntent service = null;
-	
-	@Override
-	public void onEnabled(Context context) {
-		if (service == null)  
-            service = PendingIntent.getBroadcast(context, 0, new Intent(context, WidgetProvider.class), 0);  
-		
-        final AlarmManager m = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);  
-		m.setRepeating(AlarmManager.RTC, System.currentTimeMillis(), UPDATE_DELAY, service);
-	}
-	
-	public void onDisabled(Context context)  {  
-        final AlarmManager m = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);  
-        if(service != null)
-        	m.cancel(service);  
-    }
 	
 	@Override
 	public void onReceive(Context context, Intent intent) {

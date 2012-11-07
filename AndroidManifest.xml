@@ -38,6 +38,8 @@
 			android:permission="android.permission.BIND_REMOTEVIEWS" >
 			<intent-filter>
 				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+				<action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
 			</intent-filter>
 			<meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_provider" />
 		</receiver>
