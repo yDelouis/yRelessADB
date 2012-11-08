@@ -24,13 +24,15 @@ public class ADBReceiver extends BroadcastReceiver
 		}
 	}
 	
-	private void start(Context context) {
+	public static void start(Context context) {
 		NotifManager.show(context);
-		WidgetProvider.setOn(context);
+		WidgetProvider3x1.setOn(context);
+		WidgetProvider1x1.setOn(context);
 	}
 	
-	private void stop(Context context) {
+	public static void stop(Context context) {
 		NotifManager.cancel(context);
-		WidgetProvider.setOff(context);
+		WidgetProvider3x1.setOff(context);
+		WidgetProvider1x1.setOff(context);
 	}
 }
