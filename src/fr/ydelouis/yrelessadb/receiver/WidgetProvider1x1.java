@@ -6,8 +6,6 @@ import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 import fr.ydelouis.yrelessadb.R;
@@ -21,17 +19,10 @@ public class WidgetProvider1x1 extends AppWidgetProvider
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		if(intent.getAction() != null && intent.getAction().equals(ACTION_TOGGLE)) {
-			SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-			if(prefs.getBoolean(ADB.PREF_STATE, false))
-				Toast.makeText(context, R.string.switchingOn, Toast.LENGTH_SHORT).show();
-			else
-				Toast.makeText(context, R.string.switchingOff, Toast.LENGTH_SHORT).show();
 			if(ADB.isEnabled(context)) {
 				ADB.stop(context);
-				ADBReceiver.stop(context);
 			} else if(Wifi.isConnected(context)){
 				ADB.start(context);
-				ADBReceiver.start(context);
 			} else {
 				Toast.makeText(context, R.string.main_wifiQuestion, Toast.LENGTH_LONG).show();
 			}

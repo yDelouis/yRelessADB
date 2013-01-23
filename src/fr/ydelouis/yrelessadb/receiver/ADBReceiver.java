@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import fr.ydelouis.yrelessadb.notif.NotifManager;
 import fr.ydelouis.yrelessadb.util.ADB;
+import fr.ydelouis.yrelessadb.util.ScreenLock;
 
 public class ADBReceiver extends BroadcastReceiver
 {
@@ -26,11 +27,15 @@ public class ADBReceiver extends BroadcastReceiver
 	
 	private void start(Context context) {
 		NotifManager.show(context);
-		WidgetProvider.setOn(context);
+		WidgetProvider1x1.setOn(context);
+		WidgetProvider3x1.setOn(context);
+		ScreenLock.start(context);
 	}
 	
 	private void stop(Context context) {
 		NotifManager.cancel(context);
-		WidgetProvider.setOff(context);
+		WidgetProvider1x1.setOff(context);
+		WidgetProvider3x1.setOff(context);
+		ScreenLock.stop(context);
 	}
 }

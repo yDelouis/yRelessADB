@@ -11,7 +11,6 @@ import android.preference.PreferenceManager;
 import fr.ydelouis.yrelessadb.R;
 import fr.ydelouis.yrelessadb.activity.MainActivity;
 import fr.ydelouis.yrelessadb.receiver.ADBReceiver;
-import fr.ydelouis.yrelessadb.util.ADB;
 import fr.ydelouis.yrelessadb.util.Wifi;
 
 public class NotifManager
@@ -32,7 +31,7 @@ public class NotifManager
     	builder.setWhen(System.currentTimeMillis());
     	
     	builder.setContentTitle(context.getString(R.string.notif_title));
-    	builder.setContentText(Wifi.getIp(context)+":"+ADB.getPort(context));
+    	builder.setContentText(Wifi.getIp(context));
     	
     	Intent notificationIntent = new Intent(context, MainActivity.class);
     	notificationIntent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);

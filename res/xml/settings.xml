@@ -17,6 +17,11 @@
             android:key="@string/pref_wifi_on_key"
             android:summary="@string/server_wifi_on"
             android:title="@string/wifi_on" />
+        <CheckBoxPreference
+            android:defaultValue="@string/default_wakelock"
+            android:key="@string/pref_wakelock_key"
+            android:summary="@string/wakelock_subtitle"
+            android:title="@string/wakelock_title" />
     </PreferenceCategory>
 
 </PreferenceScreen>

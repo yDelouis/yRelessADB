@@ -83,7 +83,7 @@ public class MainActivity extends Activity
 			image.setImageResource(R.drawable.img_adb_on);
 			hint.setText(R.string.main_hintOff);
 			ipContainer.setVisibility(View.VISIBLE);
-			String completeIp = Wifi.getIp(this)+":"+ADB.getPort(this);
+			String completeIp = Wifi.getIp(this);
 			ipText.setText(completeIp);
 			commandText.setText(String.format(getString(R.string.main_command), completeIp));
 		} else {

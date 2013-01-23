@@ -25,15 +25,19 @@
 	<string name="server_noti">When the connection active</string>
 	<string name="wifi_on">WiFi auto on</string>
 	<string name="server_wifi_on">Turn on WiFi when app starts</string>
+	<string name="wakelock_title">Turn on WakeLock</string>
+	<string name="wakelock_subtitle">Keep the screen on</string>
     
     <!-- Defaults -->
     <string name="default_port">5555</string>
 	<string name="default_notif">true</string>
 	<string name="default_wifi_on">false</string>
+	<string name="default_wakelock">false</string>
 
 	<!-- Keys -->
 	<string name="pref_port_key">key_port</string>
 	<string name="pref_notif_key">key_notif</string>
 	<string name="pref_wifi_on_key">key_wifi_on</string>
+	<string name="pref_wakelock_key">key_wakelock</string>
 	
 </resources>
