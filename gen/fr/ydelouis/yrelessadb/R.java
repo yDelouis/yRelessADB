@@ -17,23 +17,21 @@ public final class R {
         public static final int anim_adb_off=0x7f020000;
         public static final int anim_adb_on=0x7f020001;
         public static final int bkg_app=0x7f020002;
-        public static final int bkg_widget=0x7f020003;
-        public static final int bkg_widget1x1=0x7f020004;
-        public static final int bkg_widget3x1=0x7f020005;
-        public static final int divider_widget=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
-        public static final int ic_menu_settings=0x7f020008;
-        public static final int ic_notif=0x7f020009;
-        public static final int img_adb_1=0x7f02000a;
-        public static final int img_adb_2=0x7f02000b;
-        public static final int img_adb_3=0x7f02000c;
-        public static final int img_adb_off=0x7f02000d;
-        public static final int img_adb_on=0x7f02000e;
-        public static final int img_widget=0x7f02000f;
-        public static final int img_widget1x1=0x7f020010;
-        public static final int img_widget3x1=0x7f020011;
-        public static final int img_widget_off=0x7f020012;
-        public static final int img_widget_on=0x7f020013;
+        public static final int bkg_widget1x1=0x7f020003;
+        public static final int bkg_widget3x1=0x7f020004;
+        public static final int divider_widget=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int ic_menu_settings=0x7f020007;
+        public static final int ic_notif=0x7f020008;
+        public static final int img_adb_1=0x7f020009;
+        public static final int img_adb_2=0x7f02000a;
+        public static final int img_adb_3=0x7f02000b;
+        public static final int img_adb_off=0x7f02000c;
+        public static final int img_adb_on=0x7f02000d;
+        public static final int img_widget1x1=0x7f02000e;
+        public static final int img_widget3x1=0x7f02000f;
+        public static final int img_widget_off=0x7f020010;
+        public static final int img_widget_on=0x7f020011;
     }
     public static final class id {
         public static final int main_command=0x7f090004;
@@ -48,9 +46,8 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int widget=0x7f030001;
-        public static final int widget_1x1=0x7f030002;
-        public static final int widget_3x1=0x7f030003;
+        public static final int widget_1x1=0x7f030001;
+        public static final int widget_3x1=0x7f030002;
     }
     public static final class menu {
         public static final int activity_main=0x7f080000;
